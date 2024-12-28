@@ -10,10 +10,10 @@ import numpy as np
 # logo = Image.open('images/logo.png')
 # st.sidebar.image(logo, width=180)
 
-# # Agrega un título de contexto y una reseña pequeña
-# st.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;">Contexto</p>', unsafe_allow_html=True)
+# Agrega un título de contexto y una reseña pequeña
+st.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;">Contexto</p>', unsafe_allow_html=True)
 st.markdown('<p style="text-align: justify;">En la actualidad, llevar el control de las actividades desarrolladas, asi como los fenomenos climatologicos es fundamental.</p>', unsafe_allow_html=True)
-# st.markdown('<p style="text-align: justify;">El objetivo principal es obtener una forma facil de monitorear esto.</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: justify;">El objetivo principal es obtener una forma facil de monitorear esto.</p>', unsafe_allow_html=True)
 st.markdown("         ")
 st.markdown("         ")
 
@@ -22,10 +22,10 @@ col1,col2 = st.sidebar.columns(2)
 # col2.image(paragua, width=94)
 st.sidebar.title("Filtros2")
 
-# # Agrega el título "Quienes Somos"
-# st.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;">Quienes Somos</p>', unsafe_allow_html=True)
-# st.markdown("         ")
-# st.markdown("         ")
+# Agrega el título "Quienes Somos"
+st.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;">Quienes Somos</p>', unsafe_allow_html=True)
+st.markdown("         ")
+st.markdown("         ")
 
 # col1, col2, col3, col4 = st.columns(4) # 
 
