@@ -3,3 +3,5 @@ streamlit
 numpy
 Pillow
 matplotlib
+openpyxl
+plotly
