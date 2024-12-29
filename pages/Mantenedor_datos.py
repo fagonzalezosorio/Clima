@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import datetime
 # from streamlit_autorefresh import st_autorefresh
-import pyautogui
+# import pyautogui
 import time
 codigo_secreto = 'ahahah33'
 
@@ -39,7 +39,7 @@ def crear_evento():
                 if col2.button("No"):
                     st.write("haz seleccionado No. La pagina se reiniciara!")
                     time.sleep(1)
-                    pyautogui.hotkey("ctrl","F5")
+                    # pyautogui.hotkey("ctrl","F5")
 
                 if col1.button("Sí"):
                     año = input_fecha.year; mes =  input_fecha.month;  dia =  input_fecha.day
@@ -50,7 +50,7 @@ def crear_evento():
                         df3.to_excel(writer,sheet_name= "Lluvia", index=False)
                     st.write("El registro ha sido ingresado satisfactoriamente")
                     time.sleep(2)
-                    pyautogui.hotkey("ctrl","F5")
+                    # pyautogui.hotkey("ctrl","F5")
 
 
 
@@ -72,15 +72,16 @@ def eliminar_evento():
         if col2.button("No"):
             st.write("haz seleccionado No. La pagina se reiniciara!")
             time.sleep(1)
-            pyautogui.hotkey("ctrl","F5")
-
+            # pyautogui.hotkey("ctrl","F5")
+            # st.experimental_rerun()
         if col1.button("Sí"):
             with pd.ExcelWriter("Datos/Lluvia (1).xlsx", engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
                 df3.to_excel(writer,sheet_name= "Lluvia", index=False)
 
             st.write("El registro ha sido eliminado satisfactoriamente")
             time.sleep(2)
-            pyautogui.hotkey("ctrl","F5")
+            # pyautogui.hotkey("ctrl","F5")
+            st.experimental_rerun()
 
 
 
