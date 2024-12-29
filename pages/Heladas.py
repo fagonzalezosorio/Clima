@@ -14,7 +14,7 @@ import numpy as np
 
 ############## Titulo ###########################3
 col1, col2, col3 = st.columns((4,1,1))
-col1.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;">test streamlit doble pagina </p>', unsafe_allow_html=True)
+col1.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px; font-weight:bold; text-shadow: 2px 2px 4px #000000;"> No hay información disponible </p>', unsafe_allow_html=True)
 col1.markdown("         ")
 col1.markdown("         ")
 
@@ -26,7 +26,7 @@ col1.markdown("         ")
 col1,col2 = st.sidebar.columns(2)
 # col1.image(lluvia, width=90)
 # col2.image(paragua, width=94)
-st.sidebar.title("Filtros")
+st.sidebar.title("")
 
 
 ########################################## RESUMEN MENSUAL-ANUAL ##################################3
