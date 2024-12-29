@@ -18,7 +18,9 @@ col1.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 40px
 col1.markdown("<br><br>", unsafe_allow_html=True)
 
 
-col2.image(lluvia,width=90)
+# col2.image(lluvia,width=90)
+# col2.markdown( f""" <div style="display: flex; justify-content: center;"> <img src="{lluvia}" width="90"> </div> """, unsafe_allow_html=True)
+col2.image(lluvia, width=90, use_column_width=True)
 col3.image(pluviometro, width=70)
 ######################### menu lateral ####################
 
@@ -43,7 +45,7 @@ df['Año'] = df['Año'].astype(int)
 df = df[df.Mes.notna()]
 df['Mes'] = df['Mes'].astype(int)
 
-mes = range(1,12)
+mes = range(1,13)
 nombre = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 mes_nombre = dict(zip(mes,nombre))
 nombre_mes = dict(zip(nombre,mes))
@@ -54,7 +56,7 @@ df['mes_nombre'] = df.Mes.apply(lambda x: mes_nombre[x])
 col1,col2,col3 = st.columns((3,1,3))
 col1.markdown('<p style="font-family:Calibri Light; color:Black; font-size: 20px; font-weight:bold;"> Lluvias en el periodo seleccionado: </p>', unsafe_allow_html=True)
 
-filtro_año=col2.selectbox("Año",df["Año"].unique())
+filtro_año=col2.selectbox("Año",np.sort(df["Año"].unique())[::-1])
 df_filtered= df.query('Año == @filtro_año')
 
 filtro_meses = col3.multiselect('Meses',df_filtered['mes_nombre'].unique())
@@ -128,5 +130,17 @@ conaf = conaf.dropna(how='all')
 
 col2.dataframe(conaf,height=250)
 col2.write('Fuente: Conaf')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
