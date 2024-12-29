@@ -5,5 +5,4 @@ Pillow
 matplotlib
 openpyxl
 plotly
-time
 pyautogui
